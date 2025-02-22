@@ -133,14 +133,13 @@ function Admin() {
               required
             >
               <option value="">Select category</option>
-              <option value="necklaces">Necklaces</option>
-              <option value="earrings">Earrings</option>
-              <option value="gift-hamper">Gift Hamper</option>
-              <option value="bows">Bows</option>
-              <option value="hair accessories">Hair accessories</option>
-             <option value="bracelet">Bracelet</option>
-              <option value="soft toys">Soft toys</option>
-                <option value="flower">Flower</option>                              
+              <option value="Necklaces">Necklaces</option>
+              <option value="Earrings">Earrings</option>
+              <option value="Gift Hamper">Gift Hamper</option>
+              <option value="Hair Accessories">Hair accessories</option>
+              <option value="Bracelet">Bracelet</option>
+              <option value="Soft Toys">Soft toys</option>
+              <option value="Flower">Flower</option>
             </select>
           </div>
 
