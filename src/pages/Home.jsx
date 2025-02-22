@@ -16,6 +16,8 @@ export const categories = [
   { name: "Bracelet", path: "/?category=bracelet" },
   { name: "Soft Toys", path: "/?category=soft toys" },
   { name: "Flower", path: "/?category=flower" },
+  { name: "Ring", path: "/?category=ring" },
+
 ];
 
 function Home() {
@@ -72,7 +74,7 @@ function Home() {
     <div className="container-custom py-8">
       {/* Categories Row */}
       <div className="mb-6 overflow-x-auto whitespace-nowrap scrollbar-hide">
-        <div className="flex space-x-4 md:justify-center">
+        <div className="flex space-x-4  md:justify-center">
           {categories.map((cat) => (
             <button
               key={cat.name}
@@ -90,6 +92,9 @@ function Home() {
 
       <h1 className="text-3xl font-bold text-gray-800 mb-8">
         {category ? category.charAt(0).toUpperCase() + category.slice(1) : "All Products"}
+        <Link to="/cart" className="text-gray-700 hover:text-primary">
+              <ShoppingCartIcon className="h-6 w-6" />
+            </Link>
       </h1>
 
       {/* Products Grid */}

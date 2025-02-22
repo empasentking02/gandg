@@ -15,6 +15,7 @@ export const categories = [
   { name: "Bracelet", path: "/?category=bracelet" },
   { name: "Soft Toys", path: "/?category=soft toys" },
   { name: "Flower", path: "/?category=flower" },
+  { name: "Ring", path: "/?category=Ring" },
 ];
 
 function Navbar() {

@@ -140,6 +140,7 @@ function Admin() {
               <option value="Bracelet">Bracelet</option>
               <option value="Soft Toys">Soft toys</option>
               <option value="Flower">Flower</option>
+              <option value="Ring">Ring</option>
             </select>
           </div>
 
