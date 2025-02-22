@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
+import { Link } from "react-router-dom";
+import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 
 export const categories = [
   { name: "All Categories", path: "/" }, // New "All Categories" link
@@ -90,11 +92,11 @@ function Home() {
         </div>
       </div>
 
-      <h1 className="text-3xl font-bold text-gray-800 mb-8">
+      <h1 className="text-3xl font-bold flex justify-between items-center pr-4 text-gray-800 mb-8">
         {category ? category.charAt(0).toUpperCase() + category.slice(1) : "All Products"}
         <Link to="/cart" className="text-gray-700 hover:text-primary">
-              <ShoppingCartIcon className="h-6 w-6" />
-            </Link>
+          <ShoppingCartIcon className="h-8 w-8 " />
+        </Link>
       </h1>
 
       {/* Products Grid */}
