@@ -26,7 +26,11 @@ function Navbar() {
               <div className="absolute hidden group-hover:block w-48 bg-white shadow-lg py-2 z-50">
                 <Link to="/?category=necklaces" className="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">Necklaces</Link>
                 <Link to="/?category=earrings" className="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">Earrings</Link>
-                <Link to="/?category=bows" className="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">Bows</Link>
+                <Link to="/?category=gift-hamper" className="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">Gift hamper</Link>
+                <Link to="/?category=hair accessories" className="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">Hair accessories</Link>
+                <Link to="/?category=bracelet" className="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">Bracelet</Link>
+                <Link to="/?category=soft toys" className="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">Soft toys</Link>
+                <Link to="/?category=flower" className="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white">Flower</Link>
               </div>
             </div>
             <Link to="/about" className="text-gray-700 hover:text-primary">About</Link>

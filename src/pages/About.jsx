@@ -8,7 +8,7 @@ function About() {
           <p className="text-gray-600 mb-4">
             Welcome to Gorgeous & Gleam, your premier destination for exquisite jewelry and accessories. 
             We believe that every piece of jewelry tells a story, and we're here to help you find the perfect 
-            pieces to express your unique style and personality.
+            pieces to express your unique.
           </p>
           
           <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">Our Story</h2>

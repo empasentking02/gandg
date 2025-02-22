@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import { FaInstagram } from "react-icons/fa6";
 function Footer() {
   return (
     <footer className="bg-gray-100">
@@ -32,7 +32,8 @@ function Footer() {
             <h4 className="text-lg font-semibold text-gray-700 mb-4">Contact Us</h4>
             <ul className="space-y-2">
               <li className="text-gray-600">Email: info@gorgeousandgleam.com</li>
-              <li className="text-gray-600">Phone: (555) 123-4567</li>
+              <li className="text-gray-600">Phone: +91 7908671249</li>
+              <Link to="https://www.instagram.com/gorgeous_and_gleam/" className='text-gray-600'><span className='flex gap-3 items-center'>Instagram:<FaInstagram className='text-red-400 w-10 h-10' /></span></Link>
             </ul>
           </div>
         </div>

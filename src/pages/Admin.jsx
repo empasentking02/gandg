@@ -42,7 +42,6 @@ function Admin() {
         updatedAt: new Date(),
       };
       await createDocument(productData, "Products");
-      toast.success("Product added successfully!");
     }
     setFormData({
       name: '',
@@ -136,7 +135,12 @@ function Admin() {
               <option value="">Select category</option>
               <option value="necklaces">Necklaces</option>
               <option value="earrings">Earrings</option>
+              <option value="gift-hamper">Gift Hamper</option>
               <option value="bows">Bows</option>
+              <option value="hair accessories">Hair accessories</option>
+             <option value="bracelet">Bracelet</option>
+              <option value="soft toys">Soft toys</option>
+                <option value="flower">Flower</option>                              
             </select>
           </div>
 
