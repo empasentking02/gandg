@@ -89,7 +89,7 @@ const Gallery = ({ setShowGallery }) => {
             </div>
             {/* image viewer */}
             {data && (
-                <div className="grid grid-cols-6 xl:grid-cols-5 lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2  gap-4 my-7">
+                <div className="grid grid-cols-1  xl:grid-cols-5 lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2  gap-4 my-7">
                     {data.map((file) => {
                         return <ImageCard file={file} />;
                     })}
@@ -103,6 +103,7 @@ export default Gallery;
 
 const ImageCard = ({ file }) => {
     const [showOption, setShowOption] = useState(false);
+    const { deleteDocument } = useDocuments("Gallery");
 
     const handleCopy = (link) => {
         navigator.clipboard.writeText(link).then(() => {
@@ -111,7 +112,7 @@ const ImageCard = ({ file }) => {
     };
     return (
         <div
-            className="relative border-2 border-gray-400 shadow-xl w-48 h-48"
+            className="relative border-2  border-gray-400 shadow-xl w-48 h-48"
             onMouseEnter={() => {
                 setShowOption(true);
             }}
@@ -126,10 +127,15 @@ const ImageCard = ({ file }) => {
             />
             <div
                 className={`${showOption ? "flex" : "hidden pointer-events-none"
-                    } absolute  bottom-1 ml-2  items-center  justify-center px-7 text-white h-10 bg-black/60  rounded-lg  w-[90%]`}
+                    } absolute  bottom-1 ml-2  items-center  justify-between px-7 text-white h-10 bg-black/60  rounded-lg  w-[90%]`}
             >
                 <Copy className="cursor-pointer" onClick={() => handleCopy(file.url)} />
-
+                <Trash2
+                    className="cursor-pointer"
+                    onClick={() => {
+                        deleteDocument(file.id, 'Gallery');
+                    }}
+                />
             </div>
         </div>
     );
