@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { remove, updateQuantity } from "../redux/Slices/cartSlice";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const { cart } = useSelector((state) => state);
@@ -59,9 +60,16 @@ function Cart() {
                 INR {amount}
               </span>
             </div>
-            <button className="btn-primary w-full mt-4">
-              Proceed to Checkout
-            </button>
+            <div className="btn-primary w-full text-center mt-4 ">
+              <a
+                href="https://www.instagram.com/gorgeous_and_gleam/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer w-full text-center btn-primary mt-4"
+              >
+                Dm to Buy
+              </a>
+            </div>
           </div>
         </div>
       )}

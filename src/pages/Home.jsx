@@ -4,6 +4,8 @@ import { useDocuments } from '../hooks/useDocuments';
 import { add, remove } from "../redux/Slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from 'react-toastify';
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 function Home() {
   const [searchParams] = useSearchParams();
@@ -13,6 +15,9 @@ function Home() {
   const { data } = useDocuments("Products");
   const { cart } = useSelector((state) => state);
   const dispatch = useDispatch();
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     if (data) {
@@ -29,18 +34,21 @@ function Home() {
     }
   }, [category]);
 
-
+  const openLightbox = (image) => {
+    setSelectedImage(image);
+    setIsOpen(true);
+  };
 
   const addToCart = (product) => {
     dispatch(add(product));
     toast.success("Item Added To Cart");
   };
 
-
   const removeFromCart = (product) => {
     dispatch(remove(product.id));
     toast.error("Item Removed From Cart");
   };
+
   return (
     <div className="container-custom py-8">
       <h1 className="text-3xl font-bold text-gray-800 mb-8">
@@ -53,7 +61,8 @@ function Home() {
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-64 object-cover"
+              className="w-full h-64 object-cover cursor-pointer"
+              onClick={() => openLightbox(product.image)}
             />
             <div className="p-4">
               <h2 className="text-xl font-semibold text-gray-800">{product.name}</h2>
@@ -86,6 +95,13 @@ function Home() {
           </div>
         )}
       </div>
+
+      {isOpen && (
+        <Lightbox
+          mainSrc={selectedImage}
+          onCloseRequest={() => setIsOpen(false)}
+        />
+      )}
     </div>
   );
 }
